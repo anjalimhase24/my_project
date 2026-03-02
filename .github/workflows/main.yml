@@ -1,0 +1,20 @@
+name: Simple Website CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run test script
+        run: echo "Code pushed successfully! Website is building."
+
+      - name: List project files
+        run: ls -la
